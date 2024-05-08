@@ -5,7 +5,7 @@ using Zenject;
 
 public class CharacterInstaller : MonoInstaller
 {
-    [SerializeField] private GameObject _character;
+    [SerializeField] private GameObject _characterController;
     [SerializeField] private Transform _characterTransform;
     public override void InstallBindings()
     {
@@ -15,10 +15,10 @@ public class CharacterInstaller : MonoInstaller
 
     private void CharacterPrefabInstall()
     {
-        Character character = Container.InstantiatePrefabForComponent<Character>(_character, _characterTransform.position, Quaternion.Euler(0, 90, 0), null);
+        CharacterController characterController = Container.InstantiatePrefabForComponent<CharacterController>(_characterController, _characterTransform.position, Quaternion.Euler(0, 90, 0), null);
 
-        Container.Bind<Character>().
-        FromInstance(character).
+        Container.Bind<CharacterController>().
+        FromInstance(characterController).
         AsSingle();
     }
 }
