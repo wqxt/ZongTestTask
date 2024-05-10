@@ -1,7 +1,5 @@
-﻿using System.Threading.Tasks;
-
-public interface IInteractablePanel
+﻿public interface IInteractablePanel
 {
-    public Task AsyncHidePanel();
-    public Task AsyncShowPanel();
+    public void ShowPanel();
+    public void HidePanel();
 }

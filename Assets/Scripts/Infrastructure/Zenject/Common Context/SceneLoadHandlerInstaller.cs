@@ -10,6 +10,5 @@ public class SceneLoadHandlerInstaller : MonoInstaller
     private void SceneLoadHandlerInstall()
     {
         Container.Bind<SceneLoadHandler>().AsSingle();
-
     }
 }

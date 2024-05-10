@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -15,6 +13,7 @@ public class BootstrapPoint : MonoBehaviour
 
     private void Awake()
     {
-        _sceneLoadHandler.LoadGamePlayScene();
+        Cursor.visible = false;
+        _sceneLoadHandler.LoadMainMenuScene();
     }
 }
