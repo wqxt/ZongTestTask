@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameplayPanelListener : AbstractPanel
+public class GameplayPanel : AbstractPanel
 {
     [SerializeField] private List<MenuButton> _buttonList;
+
     private void OnEnable()
     {
         foreach (var button in _buttonList)
@@ -18,6 +19,9 @@ public class GameplayPanelListener : AbstractPanel
                     break;
                 case "InstrumentsButton":
                     button.ButtonClick += OpenInstrumentsPanel;
+                    break;
+                case "ClosePanelButton":
+                    button.ButtonClick += HidePanel;
                     break;
             }
 
@@ -39,9 +43,16 @@ public class GameplayPanelListener : AbstractPanel
                 case "InstrumentsButton":
                     button.ButtonClick -= OpenInstrumentsPanel;
                     break;
+                case "ClosePanelButton":
+                    button.ButtonClick -= HidePanel;
+                    break;
             }
 
         }
+    }
+    private void Awake()
+    {
+        HidePanel();
     }
 
     private void OpenWeaponPanel()
@@ -89,5 +100,14 @@ public class GameplayPanelListener : AbstractPanel
                 panel.Value.HidePanel();
             }
         }
+    }
+
+    public override void HidePanel() => gameObject.SetActive(false);
+
+    public override void ShowPanel()
+    {
+        gameObject.SetActive(true);
+        transform.position = Camera.main.transform.TransformPoint(Vector3.forward * 2);
+        transform.rotation = Camera.main.transform.rotation;
     }
 }

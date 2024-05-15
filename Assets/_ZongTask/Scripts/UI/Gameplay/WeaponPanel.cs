@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstrumentsPanel : AbstractPanel
+public class WeaponPanel : AbstractPanel
 {
     [SerializeField] private List<MenuButton> _buttonList;
 
     private void Awake()
     {
-        Addpanel("InstrumentsPanel", this);
+        Addpanel("WeaponPanel", this);
         HidePanel();
     }
 

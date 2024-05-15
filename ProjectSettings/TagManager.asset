@@ -9,6 +9,9 @@ TagManager:
   - WeaponButton
   - ScoreButton
   - InstrumentsButton
+  - ClosePanelButton
+  - StoneLiftCoffinButton
+  - StoneLiftCoffin
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class MainMenuPanelListener : AbstractPanel
+public class MainMenuPanel : AbstractPanel
 {
     private SceneLoadHandler _sceneLoadHandler;
 
