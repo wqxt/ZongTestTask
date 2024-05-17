@@ -18,11 +18,54 @@ public class InstrumentsPanel : AbstractPanel
         HidePanel();
     }
 
+    private void OnEnable()
+    {
+        foreach (var button in _buttonList)
+        {
+            button.ButtonSelectItem += SelectItem;
+
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (var button in _buttonList)
+        {
+            button.ButtonSelectItem += SelectItem;
+        }
+    }
+
+    private void SelectItem(string buttonName)
+    {
+        foreach(var item in _inventory._characterItems)
+        {
+            if(item.Key == buttonName)
+            {
+                item.Value.SetActive(true);
+                _inventory._characterItems.Remove(item.Key);
+                HideButton(item.Key);
+                HidePanel();
+                return;
+            }
+        }
+
+    }
+
+    private void HideButton(string buttonName)
+    {
+        foreach (var button in _buttonList)
+        {
+            if(button.tag == buttonName)
+            {
+                button.gameObject.SetActive(false);
+                return;
+            }
+        }
+    }
+
     private void CheckInventoryItem()
     {
-        Debug.Log("Check item in tyhe instruments panel");
-
-        if (_inventory._items.ContainsKey("StoneLiftCoffin"))
+        if (_inventory._characterItems.ContainsKey("StoneLiftCoffin"))
         {
             foreach (var button in _buttonList)
             {

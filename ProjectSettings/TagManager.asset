@@ -11,7 +11,9 @@ TagManager:
   - InstrumentsButton
   - ClosePanelButton
   - StoneLiftCoffinButton
+  - Item
   - StoneLiftCoffin
+  - Instrument
   layers:
   - Default
   - TransparentFX

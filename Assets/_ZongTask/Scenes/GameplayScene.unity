@@ -123,6 +123,99 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &192922617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 488019803322473044, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Stone Lift Coffin '
+      objectReference: {fileID: 0}
+    - target: {fileID: 488019803322473044, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Instrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce1a9ee991f561843a850b287a9d95c6, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,94 +718,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &6043730142743709514
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 488019803322473044, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_Name
-      value: 'Stone Lift Coffin '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322712345287975500, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.023
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.415
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805693400098208420, guid: ce1a9ee991f561843a850b287a9d95c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ce1a9ee991f561843a850b287a9d95c6, type: 3}
 --- !u!114 &7005851010272698936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,8 +731,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterPrefab: {fileID: 184930840053898, guid: 552edddc21b7ac2429d832e0098a496c,
-    type: 3}
-  _characterInputListenerPrefab: {fileID: 1082754311091178213, guid: 0e32edd8136ea9b4d8e2c806880cb5c9,
     type: 3}
   _characterTransform: {fileID: 903321078}
 --- !u!4 &7389741043664125845
@@ -752,7 +755,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 505307131}
-  - {fileID: 6043730142743709514}
   - {fileID: 2119702027}
   - {fileID: 903321078}
   - {fileID: 485372447}
+  - {fileID: 192922617}

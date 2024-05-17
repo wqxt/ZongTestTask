@@ -2,12 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Object/Inventory")]
-public class Inventory : ScriptableObject
+public class Inventory : ItemDataBase
 {
-    [SerializeField] internal Dictionary<string, GameObject> _items = new();
-    public void AddItem(string itemName, GameObject itemToAdd)
+    [SerializeField] internal Dictionary<string, GameObject> _characterItems = new();
+
+    public void AddItem(string itemName, GameObject itemObject)
     {
-        _items.Clear();
-        _items.Add(itemName, itemToAdd);
+        Item itemToAdd = GetItem(itemName);
+        
+        if(itemToAdd != null)
+        {
+            _characterItems.Add(itemToAdd._itemName, itemObject);
+        }
     }
 }

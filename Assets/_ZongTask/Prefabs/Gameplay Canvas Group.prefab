@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1673939744837023590}
   m_Layer: 5
   m_Name: Stone Lift Coffin Button
-  m_TagString: Untagged
+  m_TagString: StoneLiftCoffin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 2334596204167254097}
   m_Layer: 5
   m_Name: Gameplay Canvas Group
-  m_TagString: Untagged
+  m_TagString: Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4970804920819398588
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,43 +7,38 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private XRDeviceSimulator _simulator;
-    [SerializeField] private XRRayInteractor _xRRayInteractorLeft;
-    [SerializeField] private XRRayInteractor _xRRayInteractorRight;
+    [SerializeField] private XRRayInteractor _xRRayInteractor;
 
     public event Action<string, GameObject> GripObject;
     public event Action OpenInventoryPanel;
 
-
-    private void Awake()
-    {
-        Debug.Log($"{this} is installed");
-    }
     private void OnEnable()
     {
-        _simulator.gripAction.action.performed += Grip;
+        _simulator.triggerAction.action.performed += TakeObject;
         _simulator.menuAction.action.performed += OpenMenu;
     }
 
     private void OnDisable()
     {
-        _simulator.gripAction.action.performed -= Grip;
+        _simulator.gripAction.action.performed -= TakeObject;
         _simulator.menuAction.action.performed -= OpenMenu;
     }
 
-    private void Grip(InputAction.CallbackContext callbackcontext)
+    private void TakeObject(InputAction.CallbackContext callbackcontext)
     {
-        try
+        if(_simulator.gripAction.action.IsPressed())
         {
-            if (_xRRayInteractorLeft.rayEndTransform.tag == "StoneLiftCoffin" || _xRRayInteractorRight.rayEndTransform.tag == "StoneLiftCoffin")
+            try
             {
-                GameObject gripObject = _xRRayInteractorLeft.rayEndTransform.gameObject;
-                gripObject.gameObject.SetActive(false);
-                gripObject.transform.SetParent(_xRRayInteractorLeft.rayEndTransform, true);
-                GripObject?.Invoke("StoneLiftCoffin", gripObject);
-                OpenInventoryPanel?.Invoke();
+                GripObject?.Invoke(_xRRayInteractor.rayEndTransform.gameObject.tag, _xRRayInteractor.rayEndTransform.gameObject);
+                _xRRayInteractor.rayEndTransform.gameObject.SetActive(false);
+            }
+            catch (Exception exeption)
+            {
+                Debug.LogException(exeption);
             }
         }
-        catch (Exception)
+        else
         {
             return;
         }

@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 4934547973132303436}
   m_Layer: 0
   m_Name: 'Stone Lift Coffin '
-  m_TagString: StoneLiftCoffin
+  m_TagString: Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -557,7 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc661b34c15bebb4c833f5c0a46df3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemData: {fileID: 11400000, guid: 68599cf3f5c3cec4da77110dd0194ed1, type: 2}
 --- !u!1 &1193181836307822145
 GameObject:
   m_ObjectHideFlags: 0

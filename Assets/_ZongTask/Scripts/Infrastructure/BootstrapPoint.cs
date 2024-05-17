@@ -12,8 +12,8 @@ public class BootstrapPoint : MonoBehaviour
     }
 
     private void Awake()
-    {
-        Cursor.visible = false;
+    { 
+        Cursor.lockState = CursorLockMode.Locked;
         _sceneLoadHandler.LoadMainMenuScene();
     }
 }
