@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private XRDeviceSimulator _simulator;
     [SerializeField] private XRRayInteractor _xRRayInteractor;
 
-    public event Action<string, GameObject> GripObject;
+    public event Action<ItemInstance> GripObject;
     public event Action OpenInventoryPanel;
 
     private void OnEnable()
@@ -26,12 +26,16 @@ public class CharacterController : MonoBehaviour
 
     private void TakeObject(InputAction.CallbackContext callbackcontext)
     {
-        if(_simulator.gripAction.action.IsPressed())
+        if (_simulator.gripAction.action.IsPressed())
         {
             try
             {
-                GripObject?.Invoke(_xRRayInteractor.rayEndTransform.gameObject.tag, _xRRayInteractor.rayEndTransform.gameObject);
-                _xRRayInteractor.rayEndTransform.gameObject.SetActive(false);
+                if (_xRRayInteractor.rayEndTransform.gameObject.TryGetComponent(out ItemInstance itemInstance))
+                {
+                    GripObject?.Invoke(itemInstance);
+                    itemInstance.gameObject.SetActive(false);
+                    OpenInventoryPanel?.Invoke();
+                }
             }
             catch (Exception exeption)
             {

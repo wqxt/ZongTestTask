@@ -12,11 +12,6 @@ public class InventoryListener : MonoBehaviour
         _characterController = characterController;
     }
 
-    private void Awake()
-    {
-        _inventory.BuildItemDataBase();
-    }
-
     private void OnEnable()
     {
         _characterController.GripObject += _inventory.AddItem;

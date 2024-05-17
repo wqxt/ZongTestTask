@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 7935644144872209492}
   - component: {fileID: 7094370341768770582}
   - component: {fileID: 6917767301316470777}
-  - component: {fileID: 4934547973132303436}
+  - component: {fileID: -1544117473887891706}
   m_Layer: 0
   m_Name: 'Stone Lift Coffin '
   m_TagString: Instrument
@@ -545,7 +545,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4934547973132303436
+--- !u!114 &-1544117473887891706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,9 +554,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 488019803322473044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc661b34c15bebb4c833f5c0a46df3bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 30196087b250dab4d9a46e15a64de1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: d6a8563d13b652843b632852dbe202d3, type: 2}
 --- !u!1 &1193181836307822145
 GameObject:
   m_ObjectHideFlags: 0

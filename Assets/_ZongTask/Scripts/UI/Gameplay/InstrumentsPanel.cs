@@ -37,13 +37,13 @@ public class InstrumentsPanel : AbstractPanel
 
     private void SelectItem(string buttonName)
     {
-        foreach(var item in _inventory._characterItems)
+        foreach (var item in _inventory._characterItems)
         {
-            if(item.Key == buttonName)
+            if (item._itemData._itemName == buttonName)
             {
-                item.Value.SetActive(true);
-                _inventory._characterItems.Remove(item.Key);
-                HideButton(item.Key);
+                item.gameObject.SetActive(true);
+                _inventory._characterItems.Remove(item);
+                HideButton(buttonName);
                 HidePanel();
                 return;
             }
@@ -55,7 +55,7 @@ public class InstrumentsPanel : AbstractPanel
     {
         foreach (var button in _buttonList)
         {
-            if(button.tag == buttonName)
+            if (button.tag == buttonName)
             {
                 button.gameObject.SetActive(false);
                 return;
@@ -63,18 +63,22 @@ public class InstrumentsPanel : AbstractPanel
         }
     }
 
-    private void CheckInventoryItem()
+    private void CheckPanelButton(ItemInstance item)
     {
-        if (_inventory._characterItems.ContainsKey("StoneLiftCoffin"))
+        foreach(var button in _buttonList)
         {
-            foreach (var button in _buttonList)
+            if(button.tag == item._itemData._itemName)
             {
                 button.gameObject.SetActive(true);
             }
         }
-        else
+    }
+
+    private void CheckInventoryItem()
+    {
+        foreach (var instrument in _inventory._characterItems)
         {
-            return;
+            CheckPanelButton(instrument);
         }
     }
 
@@ -84,5 +88,10 @@ public class InstrumentsPanel : AbstractPanel
         CheckInventoryItem();
     }
 
-    public override void HidePanel() => base.HidePanel();
+    public override void HidePanel()
+    {
+        base.HidePanel();
+        CheckInventoryItem();
+     
+    }
 }
