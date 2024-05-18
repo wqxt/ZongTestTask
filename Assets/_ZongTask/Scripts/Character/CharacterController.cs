@@ -32,7 +32,8 @@ public class CharacterController : MonoBehaviour
             {
                 if (_xRRayInteractor.rayEndTransform.gameObject.TryGetComponent(out ItemInstance itemInstance))
                 {
-                    GripObject?.Invoke(itemInstance);
+                    GripObject?.Invoke(itemInstance);   
+                    itemInstance.transform.SetParent(_xRRayInteractor.gameObject.transform ,true);
                     itemInstance.gameObject.SetActive(false);
                     OpenInventoryPanel?.Invoke();
                 }

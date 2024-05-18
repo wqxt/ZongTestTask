@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 4671806085677528444}
   - component: {fileID: 2939749326511552918}
   m_Layer: 0
-  m_Name: Right Controller
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 9209720135290387495}
   - component: {fileID: 4428293175159388190}
   m_Layer: 0
-  m_Name: Right Controller Stabilized
+  m_Name: Controller Stabilized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,6 +1922,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport Interactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902507, guid: c1800acf6366418a9b5f610249000331,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

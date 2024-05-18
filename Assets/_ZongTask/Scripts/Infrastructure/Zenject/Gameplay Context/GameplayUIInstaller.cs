@@ -12,9 +12,9 @@ public class GameplayUIInstaller : MonoInstaller
 
     private void UIPrefabInstall()
     {
-        GameplayPanel gameplayPanel = Container.InstantiatePrefabForComponent<GameplayPanel>(_uiGameObject, _uiGameObject.transform.position, Quaternion.identity, null);
+        MainInventoryPanel gameplayPanel = Container.InstantiatePrefabForComponent<MainInventoryPanel>(_uiGameObject, _uiGameObject.transform.position, Quaternion.identity, null);
 
-        Container.Bind<GameplayPanel>().
+        Container.Bind<MainInventoryPanel>().
         FromInstance(gameplayPanel).
         AsSingle();
     }
