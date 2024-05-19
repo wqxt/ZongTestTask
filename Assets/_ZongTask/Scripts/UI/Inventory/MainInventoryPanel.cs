@@ -57,7 +57,7 @@ public class MainInventoryPanel : AbstractPanel
 
     private void OpenWeaponPanel()
     {
-        foreach (var panel in _menuPanels)
+        foreach (var panel in _panelsList)
         {
 
             if (panel.Key.ToString() == "WeaponPanel")
@@ -73,7 +73,7 @@ public class MainInventoryPanel : AbstractPanel
 
     private void OpenScorePanel()
     {
-        foreach (var panel in _menuPanels)
+        foreach (var panel in _panelsList)
         {
             if (panel.Key.ToString() == "ScorePanel")
             {
@@ -89,7 +89,7 @@ public class MainInventoryPanel : AbstractPanel
 
     private void OpenInstrumentsPanel()
     {
-        foreach (var panel in _menuPanels)
+        foreach (var panel in _panelsList)
         {
             if (panel.Key.ToString() == "InstrumentsPanel")
             {

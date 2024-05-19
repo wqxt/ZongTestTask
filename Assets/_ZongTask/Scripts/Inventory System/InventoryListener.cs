@@ -3,24 +3,24 @@ using Zenject;
 public class InventoryListener : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory;
-    [SerializeField] private MainInventoryPanel _gameplayPanel;
-    private CharacterController _characterController;
+    [SerializeField] private MainInventoryPanel _mainInventoryPanel;
+    private PlayerController _playerController;
 
     [Inject]
-    public void Construct(CharacterController characterController)
+    public void Construct(PlayerController playerController)
     {
-        _characterController = characterController;
+        _playerController = playerController;
     }
 
     private void OnEnable()
     {
-        _characterController.GripObject += _inventory.AddItem;
-        _characterController.OpenInventoryPanel += _gameplayPanel.ShowPanel;
+        _playerController.GripObject += _inventory.AddItem;
+        _playerController.OpenInventoryPanel += _mainInventoryPanel.ShowPanel;
     }
 
     private void OnDestroy()
     {
-        _characterController.GripObject -= _inventory.AddItem;
-        _characterController.OpenInventoryPanel -= _gameplayPanel.ShowPanel;
+        _playerController.GripObject -= _inventory.AddItem;
+        _playerController.OpenInventoryPanel -= _mainInventoryPanel.ShowPanel;
     }
 }

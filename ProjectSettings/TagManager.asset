@@ -16,6 +16,8 @@ TagManager:
   - Instrument
   - FxTemporaire
   - BoxC
+  - BoxB
+  - BoxA
   layers:
   - Default
   - TransparentFX

@@ -37,13 +37,13 @@ public class InstrumentsPanel : AbstractPanel
 
     private void SelectItem(string buttonName)
     {
-        foreach (var item in _inventory._characterItems)
+        foreach (var item in _inventory._playerItemList)
         {
             if (item._itemData._itemName == buttonName)
             {
                 item.gameObject.SetActive(true);
                 item.gameObject.transform.SetParent(null, true);
-                _inventory._characterItems.Remove(item);
+                _inventory._playerItemList.Remove(item);
                 HideButton(buttonName);
                 HidePanel();
                 return;
@@ -71,14 +71,13 @@ public class InstrumentsPanel : AbstractPanel
             if(button.tag == item._itemData._itemName)
             {
                 button.gameObject.SetActive(true);
-
             }
         }
     }
 
     private void CheckInventoryItem()
     {
-        foreach (var instrument in _inventory._characterItems)
+        foreach (var instrument in _inventory._playerItemList)
         {
             CheckPanelButton(instrument);
         }
@@ -94,6 +93,5 @@ public class InstrumentsPanel : AbstractPanel
     {
         base.HidePanel();
         CheckInventoryItem();
-     
     }
 }

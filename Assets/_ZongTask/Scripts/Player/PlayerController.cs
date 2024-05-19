@@ -4,10 +4,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private XRDeviceSimulator _simulator;
     [SerializeField] private XRRayInteractor _xRRayInteractor;
+    [SerializeField] private Transform _backPointTransform;
+    [SerializeField] private CharacterController _characterController;
 
     public event Action<ItemInstance> GripObject;
     public event Action OpenInventoryPanel;
@@ -32,9 +34,7 @@ public class CharacterController : MonoBehaviour
             {
                 if (_xRRayInteractor.rayEndTransform.gameObject.TryGetComponent(out ItemInstance itemInstance))
                 {
-                    GripObject?.Invoke(itemInstance);   
-                    itemInstance.transform.SetParent(_xRRayInteractor.gameObject.transform ,true);
-                    itemInstance.gameObject.SetActive(false);
+                    HideObject(itemInstance);
                     OpenInventoryPanel?.Invoke();
                 }
             }
@@ -49,5 +49,13 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    internal protected void HideObject(ItemInstance itemInstance)
+    {
+        GripObject?.Invoke(itemInstance);
+        itemInstance.transform.SetParent(_xRRayInteractor.gameObject.transform, true);
+        itemInstance.gameObject.SetActive(false);
+    }
+
     private void OpenMenu(InputAction.CallbackContext callbackcontext) => OpenInventoryPanel?.Invoke();
+    internal protected void Teleport() => _characterController.Move(_backPointTransform.transform.position);
 }

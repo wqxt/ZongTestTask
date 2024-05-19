@@ -4,10 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Object/Inventory")]
 public class Inventory : ScriptableObject
 {
-    internal List<ItemInstance> _characterItems = new();
+    internal List<ItemInstance> _playerItemList = new();
     public void AddItem(ItemInstance itemInstance)
     {
-        _characterItems.Clear();
-        _characterItems.Add(itemInstance);
+        _playerItemList.Clear();
+        _playerItemList.Add(itemInstance);
     }
 }
