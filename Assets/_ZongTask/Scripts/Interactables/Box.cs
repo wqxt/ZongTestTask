@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particleSystem;
-
+    [SerializeField] private AudioSource _audioSource;
     public Action<ItemInstance> HideDroppedObject;
     public Action RemoveDroppedObject;
     public Action<string> SetUIText;
@@ -21,6 +21,7 @@ public class Box : MonoBehaviour
                 SetUIText?.Invoke(this.tag);
                 ObjectDropped?.Invoke();
                 _particleSystem.Play();
+                _audioSource.Play();
             }
         }
         else
@@ -36,6 +37,7 @@ public class Box : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _particleSystem.Stop();
+        _audioSource.Stop();
         RemoveDroppedObject?.Invoke();
     }
 
