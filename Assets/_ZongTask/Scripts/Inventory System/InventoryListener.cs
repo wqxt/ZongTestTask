@@ -12,6 +12,10 @@ public class InventoryListener : MonoBehaviour
         _playerController = playerController;
     }
 
+    private void Awake()
+    {
+        _inventory._playerItemList.Clear();
+    }
     private void OnEnable()
     {
         _playerController.GripObject += _inventory.AddItem;

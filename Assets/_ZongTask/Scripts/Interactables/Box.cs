@@ -12,7 +12,7 @@ public class Box : MonoBehaviour
     public Action TeleportPlayer;
     public Action ObjectDropped;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out ItemInstance itemInstance) && gameObject.tag != "BoxC")
         {
