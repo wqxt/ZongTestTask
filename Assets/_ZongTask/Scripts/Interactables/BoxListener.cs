@@ -4,7 +4,7 @@ using Zenject;
 
 public class BoxListener : MonoBehaviour
 {
-    private PlayerController _palyerController;
+    private PlayerController _playerController;
     private GameplayPanel _gameplayPanel;
     [SerializeField] private  List<Box> _boxList;
 
@@ -12,7 +12,7 @@ public class BoxListener : MonoBehaviour
     public void Construct(GameplayPanel gameplayPanel, PlayerController playerController)
     {
         _gameplayPanel = gameplayPanel;
-        _palyerController = playerController;
+        _playerController = playerController;
     }
 
     private void OnEnable()
@@ -22,8 +22,8 @@ public class BoxListener : MonoBehaviour
             box.SetUIText += _gameplayPanel.SetText;
             box.ObjectDropped += _gameplayPanel.ShowPanel;
             box.RemoveDroppedObject += _gameplayPanel.HidePanel;
-            box.TeleportPlayer += _palyerController.Teleport;
-            box.HideDroppedObject+= _palyerController.HideObject;
+            box.TeleportPlayer += _playerController.Teleport;
+            box.HideDroppedObject+= _playerController.HideObject;
         }
     }
 
@@ -34,8 +34,13 @@ public class BoxListener : MonoBehaviour
             box.SetUIText -= _gameplayPanel.SetText;
             box.ObjectDropped -= _gameplayPanel.ShowPanel;
             box.RemoveDroppedObject -= _gameplayPanel.HidePanel;
-            box.TeleportPlayer -= _palyerController.Teleport;
-            box.HideDroppedObject -= _palyerController.HideObject;
+            box.TeleportPlayer -= _playerController.Teleport;
+            box.HideDroppedObject -= _playerController.HideObject;
         }
+    }
+
+    public void CheckInteractables()
+    {
+
     }
 }

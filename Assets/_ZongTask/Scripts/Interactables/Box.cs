@@ -6,6 +6,7 @@ public class Box : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private AudioSource _audioSource;
+
     public Action<ItemInstance> HideDroppedObject;
     public Action RemoveDroppedObject;
     public Action<string> SetUIText;
@@ -30,7 +31,7 @@ public class Box : MonoBehaviour
             TeleportPlayer?.Invoke();
             SetUIText?.Invoke("BoxB");
             ObjectDropped?.Invoke();
-            StartCoroutine(ObjectInteraction(itemInstance));
+            StartCoroutine(RemoveObject(itemInstance));
         }
     }
 
@@ -41,7 +42,7 @@ public class Box : MonoBehaviour
         RemoveDroppedObject?.Invoke();
     }
 
-    private IEnumerator ObjectInteraction(ItemInstance itemInstance)
+    private IEnumerator RemoveObject(ItemInstance itemInstance)
     {
         yield return new WaitForSeconds(1f);
         RemoveDroppedObject?.Invoke();

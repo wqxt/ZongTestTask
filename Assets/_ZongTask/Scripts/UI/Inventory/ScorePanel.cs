@@ -26,7 +26,7 @@ public class ScorePanel : AbstractPanel
 
     private void UpdateScore()
     {
-        _scoreValue += 1;
+        _scoreValue++;
         _scoreText.text = _scoreValue.ToString();
     }
 
