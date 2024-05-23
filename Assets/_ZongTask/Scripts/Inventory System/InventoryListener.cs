@@ -2,8 +2,8 @@
 using Zenject;
 public class InventoryListener : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
     [SerializeField] private MainInventoryPanel _mainInventoryPanel;
+    [SerializeField] private Inventory _inventory;
     private PlayerController _playerController;
 
     [Inject]
@@ -15,6 +15,7 @@ public class InventoryListener : MonoBehaviour
     private void Awake()
     {
         _inventory._playerItemList.Clear();
+        _inventory.ScoreValue = 0;
     }
     private void OnEnable()
     {

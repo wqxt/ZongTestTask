@@ -4,7 +4,7 @@ using UnityEngine;
 public class MainInventoryPanel : AbstractPanel
 {
     [SerializeField] private List<MenuButton> _buttonList;
-
+    private int _panelOffset = 2;
     private void OnEnable()
     {
         foreach (var button in _buttonList)
@@ -107,7 +107,8 @@ public class MainInventoryPanel : AbstractPanel
     public override void ShowPanel()
     {
         gameObject.SetActive(true);
-        transform.position = Camera.main.transform.TransformPoint(Vector3.forward * 2);
-        transform.rotation = Camera.main.transform.rotation;
+        transform.position = Camera.main.transform.TransformPoint(Vector3.forward * _panelOffset);
+        Quaternion panelRotation = new Quaternion(0, Camera.main.transform.rotation.y, 0, Camera.main.transform.rotation.w);
+        transform.rotation = panelRotation;
     }
 }

@@ -8,9 +8,9 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private XRDeviceSimulator _simulator;
-    [SerializeField] private XRRayInteractor _xRRayInteractor;
     [SerializeField] private TrackedPoseDriver _trackedPoseDriver;
+    [SerializeField] private XRRayInteractor _xRRayInteractor;
+    [SerializeField] private XRDeviceSimulator _simulator;
     [SerializeField] private XROrigin _xrOrigin;
     private Vector3 _playerBackPosition = new Vector3(0, 1.3f, 0);
 
@@ -37,10 +37,15 @@ public class PlayerController : MonoBehaviour
             {
                 if (_xRRayInteractor.rayEndTransform.gameObject.TryGetComponent(out ItemInstance itemInstance))
                 {
-                    var playerLocalPosition = _xrOrigin.Camera.transform.localPosition;
+                    Vector3 playerLocalPosition = _xrOrigin.Camera.transform.localPosition;
                     _playerBackPosition = transform.TransformPoint(playerLocalPosition);
                     HideObject(itemInstance);
                     OpenInventoryPanel?.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Item not found");
+                    return;
                 }
             }
             catch (Exception exeption)
@@ -54,7 +59,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    internal protected void HideObject(ItemInstance itemInstance)
+    protected internal void HideObject(ItemInstance itemInstance)
     {
         GripObject?.Invoke(itemInstance);
         itemInstance.transform.SetParent(_xRRayInteractor.gameObject.transform, true);

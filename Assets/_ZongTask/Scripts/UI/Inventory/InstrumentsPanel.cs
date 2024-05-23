@@ -45,7 +45,6 @@ public class InstrumentsPanel : AbstractPanel
                 item.gameObject.SetActive(true);
                 item.gameObject.transform.SetParent(null, true);
                 _inventory._playerItemList.Remove(item);
-
                 HideButton(buttonName);
                 HidePanel();
                 return;

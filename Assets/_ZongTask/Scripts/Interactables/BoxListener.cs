@@ -4,9 +4,9 @@ using Zenject;
 
 public class BoxListener : MonoBehaviour
 {
+    [SerializeField] private List<Box> _boxList;
     private PlayerController _playerController;
     private GameplayPanel _gameplayPanel;
-    [SerializeField] private  List<Box> _boxList;
 
     [Inject]
     public void Construct(GameplayPanel gameplayPanel, PlayerController playerController)

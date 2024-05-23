@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3255908816640513806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -1309,8 +1309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093af086b0713c04c97cdee49c6b0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 11400000, guid: ed5e5ab7bf4018a478bcdb408aecb417, type: 2}
   _mainInventoryPanel: {fileID: 30100739034854416}
+  _inventory: {fileID: 11400000, guid: ed5e5ab7bf4018a478bcdb408aecb417, type: 2}
 --- !u!1 &3549689975165314646
 GameObject:
   m_ObjectHideFlags: 0
