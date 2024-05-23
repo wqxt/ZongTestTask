@@ -38,9 +38,4 @@ public class BoxListener : MonoBehaviour
             box.HideDroppedObject -= _playerController.HideObject;
         }
     }
-
-    public void CheckInteractables()
-    {
-
-    }
 }

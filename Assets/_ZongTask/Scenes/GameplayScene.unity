@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 3401245048643608220, guid: 40f0c41fcba97dd408041038fd8c3bc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3401245048643608220, guid: 40f0c41fcba97dd408041038fd8c3bc3,
         type: 3}
@@ -1043,7 +1043,7 @@ PrefabInstance:
     - target: {fileID: 5154370113270696827, guid: a284c7fce0562bb4e8464e4c236d31e1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5154370113270696827, guid: a284c7fce0562bb4e8464e4c236d31e1,
         type: 3}
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2f5fc1a9fc70e47b8fa543a8939aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _palyerPrefab: {fileID: 184930840053898, guid: a0c5b8df84d58264a97972c4b351d536,
+  _palyerPrefab: {fileID: 4965136619761999338, guid: 9ae3f85f62a6a234b895eb5c5de1fa45,
     type: 3}
   _playerTransform: {fileID: 5047499453935126974}
 --- !u!114 &7272819841197367855 stripped
