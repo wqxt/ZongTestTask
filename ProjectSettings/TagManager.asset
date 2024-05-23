@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayButton
+  - ExitButton
+  - WeaponButton
+  - ScoreButton
+  - InstrumentsButton
+  - ClosePanelButton
+  - StoneLiftCoffinButton
+  - Item
+  - StoneLiftCoffin
+  - Instrument
+  - FxTemporaire
+  - BoxC
+  - BoxB
+  - BoxA
   layers:
   - Default
   - TransparentFX
